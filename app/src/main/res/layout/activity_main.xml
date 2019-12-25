@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.MainActivity">
+    <ImageView
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/image"
+            android:id="@+id/imgProfile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+    <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintStart_toStartOf="@id/imgProfile"
+            app:layout_constraintTop_toBottomOf="@id/imgProfile"
+            app:layout_constraintEnd_toEndOf="@id/imgProfile"
+            android:id="@+id/tv_userName"
+            android:textAlignment="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+
+    <TextView
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toTopOf="@id/imgProfile"
+            app:layout_constraintStart_toEndOf="@id/imgProfile"
+            app:layout_constraintEnd_toStartOf="@id/tv_followers"
+            android:id="@+id/tv_likes"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="@dimen/content_text_size"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            app:layout_constraintTop_toTopOf="@id/tv_likes"
+            app:layout_constraintStart_toEndOf="@id/tv_likes"
+            app:layout_constraintEnd_toStartOf="@id/tv_following"
+            android:id="@+id/tv_followers"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="@dimen/content_text_size"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    <TextView
+            app:layout_constraintTop_toTopOf="@id/tv_likes"
+            app:layout_constraintStart_toEndOf="@id/tv_followers"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/tv_following"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="@dimen/content_text_size"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            app:layout_constraintStart_toStartOf="@id/tv_likes"
+            app:layout_constraintEnd_toEndOf="@id/tv_likes"
+            app:layout_constraintTop_toBottomOf="@id/tv_likes"
+            android:textAlignment="center"
+            android:text="@string/likes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+
+    <TextView
+            app:layout_constraintStart_toStartOf="@id/tv_followers"
+            app:layout_constraintTop_toBottomOf="@+id/tv_followers"
+            app:layout_constraintEnd_toEndOf="@id/tv_followers"
+            android:textAlignment="center"
+            android:text="@string/followers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            app:layout_constraintEnd_toEndOf="@id/tv_following"
+            app:layout_constraintStart_toStartOf="@id/tv_following"
+            app:layout_constraintTop_toBottomOf="@id/tv_following"
+            android:textAlignment="center"
+            android:text="@string/following"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    <androidx.cardview.widget.CardView
+            android:id="@+id/spilt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_userName"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recNoti"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/spilt"/>
+    <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progress_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <include
+            android:visibility="gone"
+            android:id="@+id/layout_no_internet"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            layout="@layout/content_no_network"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

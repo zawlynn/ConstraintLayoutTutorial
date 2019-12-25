@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AppSynthCodeChallenge</string>
+    <string name="likes">Likes</string>
+    <string name="following">Following</string>
+    <string name="followers">Followers</string>
+    <string name="offline">You are offline.</string>
+    <string name="tryagain">Try Again</string>
+    <string name="error_occur">Error occurred , Please try again.</string>
+    <string name="profile_pic">Profile Picture</string>
+    <string name="image">Image</string>
+</resources>

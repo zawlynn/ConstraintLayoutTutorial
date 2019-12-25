@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="normal">5dp</dimen>
+    <dimen name="medium">10dp</dimen>
+    <dimen name="header">18sp</dimen>
+    <dimen name="desc">15sp</dimen>
+    <dimen name="rounded">150dp</dimen>
+    <dimen name="button_size">120dp</dimen>
+    <dimen name="profile_photo">100dp</dimen>
+    <dimen name="content_text_size">35sp</dimen>
+</resources>
